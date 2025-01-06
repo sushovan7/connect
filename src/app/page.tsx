@@ -10,17 +10,5 @@ import { Button } from "@/components/ui/button";
 import { ToggleTheme } from "@/components/ToggleTheme";
 
 export default function Home() {
-  return (
-    <div>
-      <SignedOut>
-        <SignInButton mode="modal">
-          <Button>Sign in</Button>
-        </SignInButton>
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-      <ToggleTheme />
-    </div>
-  );
+  return <div>Home</div>;
 }
