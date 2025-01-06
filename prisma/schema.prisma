@@ -50,9 +50,6 @@ id Int @default(autoincrement()) @id
   likes Like[]
   notifications Notification[] 
 }
-
-
-
 model Comment{
  id Int @default(autoincrement()) @id
   content String
@@ -67,9 +64,6 @@ model Comment{
 
   @@index([authorId,postId]) // composite index for faster queries
 }
-
-
-
 model Like {
   id Int @default(autoincrement()) @id
   postId    Int                
@@ -84,8 +78,6 @@ model Like {
   @@unique([userId,postId]) // this prevents same user liking post twice
 }
 
-
-
 model Follows{
   followerId Int
   followingId Int
@@ -98,8 +90,6 @@ model Follows{
   @@index([followerId,followingId]) // composite index for faster queries
   @@id([followerId, followingId]) // composite primary key prevents duplicate follows
 }
-
-
 
 model Notification {
 id Int @default(autoincrement()) @id
@@ -119,8 +109,6 @@ id Int @default(autoincrement()) @id
 
   @@index([userId, createdAt])
 }
-
-
 
 enum NotificationType {
   LIKE     
