@@ -7,7 +7,7 @@ import { ToggleTheme } from "./ToggleTheme";
 
 async function DesktopNavbar() {
   const user = await currentUser();
-  console.log(user);
+
   return (
     <div className="hidden md:flex items-center gap-4">
       <Button variant="ghost" className="flex items-center gap-2" asChild>
