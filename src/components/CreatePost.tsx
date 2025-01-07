@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useState } from "react";
 import { Card, CardContent, CardDescription } from "./ui/card";
-import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { Image, Loader2Icon, Send } from "lucide-react";
@@ -26,8 +26,8 @@ function CreatePost() {
         setContent("");
         setImageUrl("");
         setShowImageUpload(false);
-        toast.success("Post created successfully");
         setIsPosting(false);
+        toast.success("Post created successfully");
       }
     } catch (error) {
       console.log("Error while creating post", error);
